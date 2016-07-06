@@ -1,0 +1,6 @@
+{
+  "name": "Lotterypicture",
+  "tagline": "图片个性化转换",
+  "body": "本项目通过技术手段将图片转换为由多个小型个性化图片(如：dota图标)组成的，与原图轮廓一致的图片。本阶段实现如下功能：用户通过网页上传图片，经后台处理返回生成好的个性化图片。目前只有dota图标，后续可增加如LOL、OVERWATCH等。",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}

@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Lotterypicture by fire0me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <script type="text/javascript"> 
+	    function getUrlParameter( name ){
+	    	name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+	    	var regexS = "[\\?&]"+name+"=([^&#]*)";
+	    	var regex = new RegExp( regexS );
+	    	var results = regex.exec(window.parent.location.href );
+	    	if( results == null )    return "example.jpg";  else {
+	    	   return results[1];
+	    	   }
+	    	}
+    </script>
+  </head>
+  <body>
+  	
+    <section class="page-header">
+      <h1 class="project-name">Lotterypicture</h1>
+      <h2 class="project-tagline">图片个性化转换</h2>
+	  <h2 class="btn">网页链接(暂不开放)</a>
+	  <h2 class="btn">源码链接(暂不开放)</a>
+    </section>
+
+    <section class="main-content">
+      <p>本项目通过技术手段将图片转换为由多个小型个性化图片(如：dota图标)组成的，与原图轮廓一致的图片。本阶段实现如下功能：用户通过网页上传图片，经后台处理返回生成好的个性化图片。目前只有dota图标，后续可增加如LOL、OVERWATCH等。</p></br>
+	<p> 
+		<form action="show.html" method="post" enctype="multipart/form-data">  
+            <input type="file" name="file" /><br />
+            <select name="targetName">
+				<option value="dota" selected="selected">dota</option>
+				<option value="lol">lol</option>
+			</select>
+            <input type="submit" value="上传" />  
+        </form>
+    </p>
+	<p> 
+		生成图片示例：
+	</p></br>
+	<div align="center">
+		<img id="img" src='' style="width:960px;height:720px;" /> 
+	</div>
+	<script type="text/javascript"> 
+  		var filePath = getUrlParameter('filePath');
+  		document.getElementById("img").src = filePath;
+	</script>
+    </section>
+  </body>
+</html>
